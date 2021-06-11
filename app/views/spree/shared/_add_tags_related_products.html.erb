@@ -1,9 +1,6 @@
 <div id="tags_related_container" data-hook></div>
 <script>
-window.addEventListener('DOMContentLoaded', (event) => {
-  $(document).ready(function(){
-    Spree.fetch_tags_related_products('<%= @product.try(:id) %>');
-  });
-});
-
+document.addEventListener('turbolinks:load', function () {
+  Spree.fetch_tags_related_products('<%= @product.try(:id) %>')
+})
 </script>
