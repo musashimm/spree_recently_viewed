@@ -1,6 +1,8 @@
 <div id="recently_viewed_container" data-hook></div>
 <script>
+window.addEventListener('DOMContentLoaded', (event) => {
   $(document).ready(function(){
     Spree.fetch_recently_viewed_products('<%= @product.try(:id) %>');
   });
+});
 </script>
