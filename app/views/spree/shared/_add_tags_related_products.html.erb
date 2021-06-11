@@ -1,0 +1,6 @@
+<div id="tags_related_container" data-hook></div>
+<script>
+  $(document).ready(function(){
+    Spree.fetch_tags_related_products('<%= @product.try(:id) %>');
+  });
+</script>

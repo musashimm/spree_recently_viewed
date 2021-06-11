@@ -10,6 +10,12 @@ module Spree::ProductsControllerDecorator
     render 'spree/products/recently_viewed', layout: false
   end
 
+  def tags_related
+    product = Spree::Product.find(params[:product_id])
+    products = product.find_related_tags.to_a
+    render 'spree/products/tags_related', locals: { products: products }, layout: false
+  end
+
   private
 
   def save_recently_viewed

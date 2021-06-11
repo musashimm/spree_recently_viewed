@@ -1,0 +1,11 @@
+<% if products.any? %>
+  <div id="tags_related_products" class="mt-4" data-hook>
+    <h3 class="product-section-title"><%= Spree.t(:tags_related_products) %></h3>
+
+    <ul id="tags_related_products" class="list-group">
+      <% products.each do |product| %>
+        <li class="list-group-item"><%= link_to product.name, product %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

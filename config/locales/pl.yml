@@ -2,3 +2,4 @@
 pl:
   spree:
     recently_viewed_products: "Ostatnio przeglądane produkty"
+    tags_related_products: Produkty podobne
