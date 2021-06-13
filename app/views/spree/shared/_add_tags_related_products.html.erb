@@ -1,6 +1,13 @@
-<div id="tags_related_container" data-hook></div>
-<script>
-document.addEventListener('turbolinks:load', function () {
-  Spree.fetch_tags_related_products('<%= @product.try(:id) %>')
-})
-</script>
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Podobne produkty</a>
+    </li>
+  </ul>
+  <div id="tags_related_container" data-hook></div>
+  <script>
+  document.addEventListener('turbolinks:load', function () {
+    Spree.fetch_tags_related_products('<%= @product.try(:id) %>')
+  })
+  </script>
+</div>

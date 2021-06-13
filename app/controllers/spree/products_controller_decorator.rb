@@ -12,7 +12,7 @@ module Spree::ProductsControllerDecorator
 
   def tags_related
     product = Spree::Product.find(params[:product_id])
-    products = product.find_related_tags.to_a
+    products = product.find_related_tags.limit(4).to_a
     render 'spree/products/tags_related', locals: { products: products }, layout: false
   end
 
