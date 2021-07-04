@@ -1,5 +1,10 @@
-<div id="tags_related_products" class="mt-3 col-md-12 col-lg-9" data-hook="tags_related_products">
-  <% if products.any? %>
+<% if products.any? %>
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Podobne produkty</a>
+    </li>
+  </ul>
+  <div id="tags_related_products" class="mt-3 col-md-12 col-lg-9" data-hook="tags_related_products">
     <div class="row">
       <% products.each do |product, index| %>
         <div id="product_<%= product.id %>" class="col-sm-4 col-6 mb-3 mb-md-4 pr-sm-0 pr-md-0 pl-md-4 pl-sm-4 <%= index&1 == 0 ? 'pl-0 pr-2' : 'pr-0 pl-2' %>">
@@ -7,9 +12,5 @@
         </div>
       <% end %>
     </div>
-  <% else %>
-    <div class="mb-3">
-      Brak.
-    </div>
-  <% end %>
-</div>
+  </div>
+<% end %>

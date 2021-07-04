@@ -1,6 +1,8 @@
-<div id="recently_viewed_container" data-hook></div>
-<script>
-document.addEventListener('turbolinks:load', function () {
-  Spree.fetch_recently_viewed_products('<%= @product.try(:id) %>')
-})
-</script>
+<div class="container mt-4">
+  <div id="recently_viewed_container" data-hook></div>
+  <script>
+  document.addEventListener('turbolinks:load', function () {
+    Spree.fetch_recently_viewed_products('<%= @product.try(:id) %>')
+  })
+  </script>
+</div>
